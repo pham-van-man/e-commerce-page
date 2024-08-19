@@ -17,13 +17,13 @@ public class ProductManagementUI {
     public void displayMenu() {
         int choice;
         do {
-            System.out.println("========== PRODUCT MANAGEMENT ==========");
-            System.out.println("1. Add a new product");
-            System.out.println("2. Display all products");
-            System.out.println("3. Update a product");
-            System.out.println("4. Delete a product");
-            System.out.println("5. Exit");
-            System.out.print("Enter your choice: ");
+            System.out.println("========== QUẢN LÝ SẢN PHẨM ==========");
+            System.out.println("1. Thêm sản phẩm mới");
+            System.out.println("2. Hiển thị tất cả sản phẩm");
+            System.out.println("3. Cập nhật sản phẩm");
+            System.out.println("4. Xóa sản phẩm");
+            System.out.println("5. Thoát");
+            System.out.print("Nhập lựa chọn của bạn: ");
             choice = scanner.nextInt();
             scanner.nextLine();
             switch (choice) {
@@ -40,10 +40,10 @@ public class ProductManagementUI {
                     deleteProduct();
                     break;
                 case 5:
-                    System.out.println("Exiting the program...");
+                    System.out.println("Thoát khỏi chương trình...");
                     break;
                 default:
-                    System.out.println("Invalid choice. Please try again.");
+                    System.out.println("Lựa chọn không hợp lệ. Vui lòng thử lại.");
             }
         } while (choice != 5);
     }
@@ -82,7 +82,7 @@ public class ProductManagementUI {
     }
 
     private void deleteProduct() {
-        System.out.print("Enter product ID to delete: ");
+        System.out.print("Nhập ID sản phẩm để xóa: ");
         int idProduct = scanner.nextInt();
         scanner.nextLine();
         productController.deleteProduct(idProduct);

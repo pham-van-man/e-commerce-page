@@ -22,13 +22,13 @@ public class Main {
             ProductManagementUI ui = new ProductManagementUI(productController);
             ui.displayMenu();
         } catch (SQLException e) {
-            System.out.println("Error connecting to the database: " + e.getMessage());
+            System.out.println("Lỗi kết nối với cơ sở dữ liệu: " + e.getMessage());
         } finally {
             if (connection != null) {
                 try {
                     connection.close();
                 } catch (SQLException e) {
-                    System.out.println("Error closing the database connection: " + e.getMessage());
+                    System.out.println("Lỗi khi đóng kết nối cơ sở dữ liệu: " + e.getMessage());
                 }
             }
         }
